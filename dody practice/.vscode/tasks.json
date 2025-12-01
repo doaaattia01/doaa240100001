@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build Q1",
+      "type": "shell",
+      "command": "\"C:/ProgramData/mingw64/mingw64/bin/g++.exe\"",
+      "args": [
+        "Q1.cpp",
+        "-o",
+        "Q1.exe",
+        "-g"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"],
+      "detail": "Compile Q1.cpp to Q1.exe with debug symbols",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": false
+      }
+    }
+  ]
+}
+
