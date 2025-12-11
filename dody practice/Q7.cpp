@@ -6,7 +6,6 @@ std::string pluralize(std::string word) {
     int len = word.length();
     if (len < 2) return word + "s";
 
-    // 1. Ends with ch, x, s, o -> add es
     if (len >= 2) {
         std::string end2 = word.substr(len - 2);
         if (end2 == "ch" || word.back() == 'x' || word.back() == 's' || word.back() == 'o') {
@@ -14,9 +13,8 @@ std::string pluralize(std::string word) {
         }
     }
 
-    // 2. Ends with f or fe -> change to ves
     if (word.back() == 'f') {
-        if (len >= 2 && word[len - 2] != 'f') { // Ensures it's 'f' and not 'ff' (e.g., 'cliff')
+        if (len >= 2 && word[len - 2] != 'f') { 
             return word.substr(0, len - 1) + "ves";
         }
     }
@@ -24,14 +22,10 @@ std::string pluralize(std::string word) {
         return word.substr(0, len - 2) + "ves";
     }
 
-    // 3. Ends with y -> change to ies
     if (word.back() == 'y') {
-        // Assume 'y' always follows a consonant or a vowel, and change it.
-        // Simple model: just check the last letter.
         return word.substr(0, len - 1) + "ies";
     }
 
-    // 4. All other cases -> add s
     return word + "s";
 }
 
