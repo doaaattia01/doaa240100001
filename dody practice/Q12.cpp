@@ -1,3 +1,4 @@
+//بيعد عدد الinversions فالكود 
 #include <iostream>
 #include <vector>
 
