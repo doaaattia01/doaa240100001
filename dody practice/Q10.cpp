@@ -1,3 +1,6 @@
+//لبرنامج بياخد رقم N ويحدد أي جملة من القائمة يختارها باستخدام mod.
+ولو N أكبر من M، يبدأ يعدّ من الأول تاني 
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -21,6 +24,8 @@ void solve() {
 }
 
 int main() {
+
+
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(NULL);
 
